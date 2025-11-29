@@ -9,15 +9,6 @@
 
   <p align="center">
     A modern, responsive, and interactive portfolio website showcasing my projects, skills, and professional journey.
-    <br />
-    <a href="YOUR_LIVE_DEMO_LINK_HERE"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="YOUR_LIVE_DEMO_LINK_HERE">View Demo</a>
-    ·
-    <a href="https://github.com/Dhirendra10251/portfolio_website/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Dhirendra10251/portfolio_website/issues">Request Feature</a>
   </p>
 </div>
 
@@ -56,7 +47,7 @@ It is designed with a focus on **performance**, **responsiveness**, and **clean 
 
 ## Live Demo
 
-link :-
+<a href="https://dhirendra10251.github.io/portfolio_website/">View Demo</a>
 
 ## 🛠 Built With
 
