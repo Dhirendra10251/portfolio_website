@@ -30,7 +30,7 @@
     <li><a href="#Live Demo">Live Demo</a></li>
     <li><a href="#Built-with">Built-with</a></li>
     <li><a href="#Key-feature">Key-feature</a></li>
-    <li><a href="#Getting-started">\Getting-started</a></li>
+    <li><a href="#Getting-started">Getting-started</a></li>
     <li><a href="Folder-structure">Folder-structure</a></li>
   </ol>
 </details>
