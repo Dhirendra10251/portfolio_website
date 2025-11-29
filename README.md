@@ -27,11 +27,11 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#About-the-project">About The Project</a></li>
-    <li><a href="#Live Demo">Built With</a></li>
-    <li><a href="#Built-with">Key Features</a></li>
-    <li><a href="#Key-feature">Getting Started</a></li>
-    <li><a href="#Getting-started">Folder Structure</a></li>
-    <li><a href="Folder-structure">Contact</a></li>
+    <li><a href="#Live Demo">Live Demo</a></li>
+    <li><a href="#Built-with">Built-with</a></li>
+    <li><a href="#Key-feature">Key-feature</a></li>
+    <li><a href="#Getting-started">\Getting-started</a></li>
+    <li><a href="Folder-structure">Folder-structure</a></li>
   </ol>
 </details>
 
