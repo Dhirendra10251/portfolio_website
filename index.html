@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhirendra Kumar Thakur | Portfolio</title>
+    
+    <!-- Importing a nice tech-looking font (Roboto) from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Importing Icons (for X, GitHub, LinkedIn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES (Color Palette) --- 
+           We define colors here so we can change them easily later. */
+        :root {
+            --bg-color: #0f172a;       /* Dark Blue/Grey background */
+            --card-bg: #1e293b;        /* Slightly lighter for cards */
+            --text-main: #e2e8f0;      /* White-ish text */
+            --text-secondary: #94a3b8; /* Grey text */
+            --accent: #38bdf8;         /* Bright Cyan for links/buttons */
+            --hover: #0ea5e9;          /* Darker Blue for hover states */
+        }
+
+        /* --- GLOBAL RESET --- 
+           Removes default browser spacing so we have full control. */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 800px; /* Limits width so lines aren't too long to read */
+            margin: 0 auto;   /* Centers the container */
+            padding: 0 20px;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            padding: 60px 0 20px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes the image a perfect circle */
+            border: 4px solid var(--accent); /* Blue ring around image */
+            object-fit: cover; /* Prevents image stretching */
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .university {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        /* --- SOCIAL LINKS --- */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .social-btn {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-btn:hover {
+            color: var(--accent);
+        }
+
+        /* --- SECTIONS (About, Projects, Hobbies) --- */
+        section {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px; /* Rounded corners */
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* --- LINKS LIST --- */
+        .link-list {
+            list-style: none;
+        }
+
+        .link-list li {
+            margin-bottom: 10px;
+        }
+
+        .link-list a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- TAGS (For Hobbies/Skills) --- */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1); /* Transparent blue */
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+        }
+        
+        /* Mobile Responsive adjustment */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <a href="https://www.linkedin.com/in/dhirendra-kumar-thakur-794955365/" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHzQxR0DjjXbA/profile-displayphoto-shrink_400_400/B4EZcX7__MHkAs-/0/1748453294821?e=1756339200&v=beta&t=e0S1eootndqCVXDyJGnmR2pY_BP54WlFUcGp-pk6iEE" 
+                     alt="Dhirendra Kumar Thakur" 
+                     class="profile-img"
+                     onerror="this.src='https://via.placeholder.com/150'"> <!-- Fallback image if link breaks -->
+            </a>
+            <h1>Dhirendra Kumar Thakur</h1>
+            <p class="subtitle">CSE Student & Tech Enthusiast</p>
+            <p class="university">VIT Bhopal University</p>
+            
+            <!-- Social Media Icons (Replaces text links) -->
+            <div class="social-links">
+                <a href="https://x.com/Dhirendrakt18" target="_blank" class="social-btn" title="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/Dhirendra1810/" target="_blank" class="social-btn" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dhirendra-kumar-thakur-794955365/" target="_blank" class="social-btn" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- PORTFOLIO SECTIONS -->
+        <main>
+            <!-- 
+               NOTE: I changed your local file links (file:///...) to internal page links.
+               Since you likely haven't built those other HTML pages yet, 
+               keeping everything on one page is better for a starter portfolio.
+            -->
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a first-year Computer Science Engineering student with a deep interest in 
+                    <strong>Artificial Intelligence</strong>. I love exploring new technologies and building things that solve real-world problems.
+                </p>
+            </section>
+
+            <section id="details">
+                <h2>My Details</h2>
+                <ul class="link-list">
+                    <!-- I used '#' placeholders. You can replace these with real links later -->
+                    <li>
+                        <i class="fa-solid fa-graduation-cap"></i> 
+                        <a href="#education">Education & Certifications</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-briefcase"></i> 
+                        <a href="#experience">Experiences & Internships</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-code"></i> 
+                        <a href="#projects">My Projects</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="hobbies">
+                <h2>Hobbies & Interests</h2>
+                <p style="margin-bottom: 15px;">
+                    Apart from coding, I am a semi-pro table tennis player and have competed in various regional tournaments.
+                </p>
+                <div class="tag-container">
+                    <span class="tag">Artificial Intelligence</span>
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Table Tennis</span>
+                    <span class="tag">Regional Tournaments</span>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <hr style="border-color: #334155; margin-bottom: 20px;">
+            <p>Connect with me:</p>
+            <p>
+                <a href="mailto:dhirenkt1810@gmail.com">dhirenkt1810@gmail.com</a>
+            </p>
+            <p>+91 8106251559</p>
+            <br>
+            <small>&copy; 2025 Dhirendra Kumar Thakur. All rights reserved.</small>
+        </footer>
+    </div>
+
+</body>
+</html>
