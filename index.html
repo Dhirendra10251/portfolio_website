@@ -14,23 +14,20 @@
     <!-- Linking to external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <div class="container">
+<div class="container">
         <!-- HEADER -->
         <header>
             <a href="https://www.linkedin.com/in/dhirendra-kumar-thakur-794955365/" target="_blank">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHzQxR0DjjXbA/profile-displayphoto-shrink_800_800/B4EZcX7__MHkAo-/0/1748453294855?e=1766016000&v=beta&t=mIIy8Ik8J_k_GiP9qi6OHwBGSmqwqlgGnEImbhAJKaw" 
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHzQxR0DjjXbA/profile-displayphoto-shrink_400_400/B4EZcX7__MHkAs-/0/1748453294821?e=1756339200&v=beta&t=e0S1eootndqCVXDyJGnmR2pY_BP54WlFUcGp-pk6iEE" 
                      alt="Dhirendra Kumar Thakur" 
                      class="profile-img"
-                     onerror="this.src='https://via.placeholder.com/150'"> <!-- Fallback image if link breaks -->
+                     onerror="this.src='https://via.placeholder.com/150'">
             </a>
             <h1>Dhirendra Kumar Thakur</h1>
             <p class="subtitle">CSE Student & Tech Enthusiast</p>
             <p class="university">VIT Bhopal University</p>
             
-            <!-- Social Media Icons (Replaces text links) -->
-            <div class="social-links">
+        <div class="social-links">
                 <a href="https://x.com/Dhirendrakt18" target="_blank" class="social-btn" title="X (Twitter)">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
@@ -42,61 +39,96 @@
                 </a>
             </div>
         </header>
-
-        <!-- PORTFOLIO SECTIONS -->
+        
         <main>
-            <!-- 
-               NOTE: I changed your local file links (file:///...) to internal page links.
-               Since you likely haven't built those other HTML pages yet, 
-               keeping everything on one page is better for a starter portfolio.
-            -->
-
-            <section id="about">
-                <h2>About Me</h2>
+            <!-- ABOUT SECTION (Kept visible for intro) -->
+            <div style="background-color: var(--card-bg); padding: 25px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <h2 style="color: var(--accent); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 10px; padding-bottom: 5px;">About Me</h2>
                 <p>
-                    I am a first-year Computer Science Engineering student <strong>specialization in Artificial intelligence and machine learning </strong> at VIT Bhopal University.
-                    I am passionate about technology, especially in the fields of <strong>Web Development</strong>.
-                    I love exploring new technologies and building things that solve real-world problems.
+                    I am a first-year Computer Science Engineering student with a deep interest in 
+                    <strong>Artificial Intelligence</strong>. I love exploring new technologies and building things that solve real-world problems.
                 </p>
-            </section>
+            </div>
 
-            <section id="details">
-                <h2>My Details</h2>
-                <ul class="link-list">
-                    <!-- I used '#' placeholders. You can replace these with real links later -->
-                    <li>
-                        <i class="fa-solid fa-graduation-cap"></i> 
-                        <a href="#education">Education</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-graduation-cap"></i> 
-                        <a href="#education">Certifications</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-code"></i> 
-                        <a href="#projects">My Projects</a>
-                    </li>
-                </ul>
-            </section>
+            <!-- DROPDOWN 1: Education & Experience -->
+            <details>
+                <summary>
+                    <span><i class="fa-solid fa-user-graduate" style="margin-right: 10px;"></i> Education & Experience</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="dropdown-content">
+                    <ul class="link-list">
+                        <li>
+                            <i class="fa-solid fa-school"></i> 
+                            <span><strong>VIT Bhopal University</strong> - B.Tech CSE (2024 - 2028)</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-certificate"></i> 
+                            <span>Web Development Bootcamp (Self-Paced)</span>
+                        </li>
+                        <!-- Add your school or other certifications here -->
+                    </ul>
+                </div>
+            </details>
 
-            <section id="tech-interests">
-                <h2>Tech Interests</h2>
-                <div class="tag-container">
-                    <span class="tag">Artificial Intelligence</span>
-                    <span class="tag">Machile learning</span>
-                    <span class="tag">Web Development</span>
-                    <span class="tag">Data structures & algorithm</span>
+            <!-- DROPDOWN 2: Projects -->
+            <details>
+                <summary>
+                    <span><i class="fa-solid fa-code" style="margin-right: 10px;"></i> My Projects</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="dropdown-content">
+                    <p style="margin-bottom: 15px;">Here are some of the projects I have worked on:</p>
+                    <ul class="link-list">
+                        <li>
+                            <i class="fa-brands fa-html5"></i>
+                            <span><strong>Personal Portfolio</strong> - A responsive website built with HTML & CSS.</span>
+                        </li>
+                        <!-- Add future projects below -->
+                        <li>
+                            <i class="fa-solid fa-robot"></i>
+                            <span><strong>AI Starter</strong> - (Future Project Placeholder)</span>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-            <section id="hobbies">
-                <h2>Hobbies</h2>
-                <div class="tag-container">
-                    <span class="tag">Table Tennis</span>
-                    <span class="tag">Listening To Music</span>
-                    <span class="tag">Traveling</span>
-                    <span class="tag">Gaming</span>
+            </details>
+
+            <!-- DROPDOWN 3: Tech Interests -->
+            <details open> <!-- Added 'open' attribute so this one is visible by default -->
+                <summary>
+                    <span><i class="fa-solid fa-microchip" style="margin-right: 10px;"></i> Tech Interests</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="dropdown-content">
+                    <p>Technologies I am currently exploring:</p>
+                    <div class="tag-container">
+                        <span class="tag">Artificial Intelligence</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Data Structures & Algorithms</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
                 </div>
-            </section>
+            </details>
+
+            <!-- DROPDOWN 4: Hobbies -->
+            <details>
+                <summary>
+                    <span><i class="fa-solid fa-gamepad" style="margin-right: 10px;"></i> Hobbies & Interests</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="dropdown-content">
+                    <p style="margin-bottom: 10px;">When I'm not coding, you can find me here:</p>
+                    <div class="tag-container">
+                        <span class="tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Table Tennis (Semi-Pro)</span>
+                        <span class="tag"><i class="fa-solid fa-music"></i> Listening to Music</span>
+                        <span class="tag"><i class="fa-solid fa-plane"></i> Traveling</span>
+                        <span class="tag"><i class="fa-solid fa-gamepad"></i> Gaming</span>
+                    </div>
+                </div>
+            </details>
+
         </main>
 
         <!-- FOOTER -->
@@ -104,7 +136,7 @@
             <hr style="border-color: #334155; margin-bottom: 20px;">
             <p>Connect with me:</p>
             <p>
-                <a href="mailto:dkt0887@gmail.com">dkt0887@gmail.com</a>
+                <a href="mailto:dhirenkt1810@gmail.com">dhirenkt1810@gmail.com</a>
             </p>
             <p>+91 8106251559</p>
             <br>

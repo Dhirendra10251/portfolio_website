@@ -1,7 +1,4 @@
-/* --- STYLE.CSS ---
-   This file contains all the CSS styles for the portfolio website.
-   It defines the color scheme, layout, and styling for various components.
-           We define colors here so we can change them easily later. */
+/* --- CSS VARIABLES (Color Palette) --- */
         :root {
             --bg-color: #0f172a;       /* Dark Blue/Grey background */
             --card-bg: #1e293b;        /* Slightly lighter for cards */
@@ -9,10 +6,10 @@
             --text-secondary: #94a3b8; /* Grey text */
             --accent: #38bdf8;         /* Bright Cyan for links/buttons */
             --hover: #0ea5e9;          /* Darker Blue for hover states */
+            --border: #334155;         /* Border color */
         }
 
-        /* --- GLOBAL RESET --- 
-           Removes default browser spacing so we have full control. */
+        /* --- GLOBAL RESET --- */
         * {
             margin: 0;
             padding: 0;
@@ -29,29 +26,29 @@
 
         /* --- LAYOUT UTILITIES --- */
         .container {
-            max-width: 800px; /* Limits width so lines aren't too long to read */
-            margin: 0 auto;   /* Centers the container */
+            max-width: 800px;
+            margin: 0 auto;
             padding: 0 20px;
         }
 
         /* --- HEADER SECTION --- */
         header {
             text-align: center;
-            padding: 60px 0 20px;
+            padding: 60px 0 30px;
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* Makes the image a perfect circle */
-            border: 4px solid var(--accent); /* Blue ring around image */
-            object-fit: cover; /* Prevents image stretching */
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
             margin-bottom: 20px;
-            transition: transform 3s ease; /* Smooth zoom effect */
+            transition: transform 0.3s ease;
         }
 
         .profile-img:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
+            transform: scale(1.05);
         }
 
         h1 {
@@ -89,50 +86,84 @@
             color: var(--accent);
         }
 
-        /* --- SECTIONS (About, Projects, Hobbies) --- */
-        section {
+        /* --- DROPDOWN MENUS (ACCORDION STYLE) --- */
+        /* This replaces the old section styling */
+        details {
             background-color: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px; /* Rounded corners */
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border: 1px solid transparent;
+            transition: border-color 0.3s;
         }
 
-        h2 {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            display: inline-block;
+        details:hover {
+            border-color: var(--accent);
         }
 
-        /* --- LINKS LIST --- */
+        /* The clickable header of the dropdown */
+        summary {
+            padding: 20px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none; /* Hides default triangle */
+            color: var(--accent);
+        }
+
+        /* Hides default marker in WebKit browsers (Chrome/Safari) */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Icon rotation animation */
+        summary i {
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary i {
+            transform: rotate(180deg);
+        }
+
+        /* The content inside the dropdown */
+        .dropdown-content {
+            padding: 0 25px 25px;
+            border-top: 1px solid var(--border);
+            color: var(--text-main);
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* --- CONTENT STYLING --- */
         .link-list {
             list-style: none;
         }
 
         .link-list li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .link-list a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
+        .link-list i {
+            color: var(--text-secondary);
+            width: 20px;
         }
 
-        .link-list a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- TAGS (For Hobbies/Skills) --- */
+        /* Tag Styling (for Hobbies/Interests) */
         .tag-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 10px;
         }
 
         .tag {
-            background-color: rgba(56, 189, 248, 0.1); /* Transparent blue */
+            background-color: rgba(56, 189, 248, 0.1);
             color: var(--accent);
             padding: 5px 12px;
             border-radius: 20px;
@@ -140,6 +171,12 @@
             border: 1px solid var(--accent);
         }
 
+        /* Animation for smooth opening feel */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         /* --- FOOTER --- */
         footer {
             text-align: center;
@@ -151,8 +188,7 @@
         footer a {
             color: var(--text-secondary);
         }
-        
-        /* Mobile Responsive adjustment */
+
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
             .container { padding: 0 15px; }
