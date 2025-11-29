@@ -47,7 +47,7 @@
             border: 4px solid var(--accent); /* Blue ring around image */
             object-fit: cover; /* Prevents image stretching */
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 3s ease; /* Smooth zoom effect */
         }
 
         .profile-img:hover {
